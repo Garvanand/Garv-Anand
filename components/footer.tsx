@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-bold text-lg">Alex Chen</h3>
+            <h3 className="font-bold text-lg">Garv Anand</h3>
             <p className="text-sm text-muted-foreground">
               AI/ML & Full Stack Developer passionate about creating intelligent solutions.
             </p>
