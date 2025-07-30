@@ -78,7 +78,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Real-time Chat Application",
+    title: "Money Mantra",
     description:
       "we're redefining financial advisory services with cutting-edge generative AI technology. Our mission is to democratize personalized financial advice, provide real-time insights, ensure transparency, and scale efficiently to meet diverse user needs.",
     image: "/placeholder-n95e2.png",
