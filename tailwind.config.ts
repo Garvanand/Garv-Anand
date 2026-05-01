@@ -7,7 +7,6 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -19,8 +18,26 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Space Grotesk", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       colors: {
-        border: "hsl(var(--border))",
+        /* Custom palette tokens */
+        "bg-void": "#050508",
+        "bg-surface": "#0D0D14",
+        "bg-card": "#12121C",
+        "bg-elevated": "#1A1A28",
+        "accent-cyan": "#00D4FF",
+        "accent-violet": "#7C3AED",
+        "ai-green": "#00FF87",
+        "text-primary": "#F0F0FF",
+        "text-muted": "#8B8BA7",
+        "text-dim": "#55556A",
+
+        /* Shadcn-compatible semantic tokens */
+        border: "hsl(var(--border-hsl))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -42,7 +59,7 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--accent-hsl))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {

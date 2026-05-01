@@ -1,95 +1,48 @@
-import dynamic from "next/dynamic"
-import { EnhancedHeroSection } from "@/components/enhanced-hero-section"
-import { EnhancedSkillsSection } from "@/components/enhanced-skills-section"
-import { LoadingSpinner } from "@/components/loading-spinner"
-import { VisitorCounter } from "@/components/visitor-counter"
-import { ProjectContributionsViz } from "@/components/project-contributions-viz"
-import { InteractiveMLDemo } from "@/components/interactive-ml-demo"
+'use client';
 
-// Lazy load heavy components
-const FeaturedProjects = dynamic(
-  () => import("@/components/featured-projects").then((mod) => ({ default: mod.FeaturedProjects })),
-  {
-    loading: () => (
-      <div className="py-20 flex justify-center">
-        <LoadingSpinner size="lg" text="Loading projects..." />
-      </div>
-    ),
-  },
-)
-
-const RealGitHubActivity = dynamic(
-  () => import("@/components/real-github-activity").then((mod) => ({ default: mod.RealGitHubActivity })),
-  {
-    loading: () => (
-      <div className="py-20 flex justify-center">
-        <LoadingSpinner size="lg" text="Loading GitHub data..." />
-      </div>
-    ),
-  },
-)
+import { Navigation } from './_components/Navigation';
+import { HeroSection } from './_components/HeroSection';
+import { ActOne } from './_components/acts/ActOne';
+import { ActTwo } from './_components/acts/ActTwo';
+import { ActThree } from './_components/acts/ActThree';
+import { ActFour } from './_components/acts/ActFour';
 
 export default function HomePage() {
   return (
-    <div className="space-y-0">
-      <EnhancedHeroSection />
-      <EnhancedSkillsSection />
+    <div className="relative w-full bg-[var(--bg)] text-[var(--text)]">
+      <Navigation />
 
-      {/* AI Mission Control Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">AI Mission Control</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Interactive challenges and live inference tools to explore how I approach AI/ML systems
-            </p>
-          </div>
-          <InteractiveMLDemo />
-        </div>
-      </section>
+      {/* Hero — viewport 0 */}
+      <HeroSection />
 
-      {/* Project Contributions Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">Project Contributions</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Detailed breakdown of my development projects with real metrics and technologies used
-            </p>
-          </div>
-          <ProjectContributionsViz />
-        </div>
-      </section>
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-[var(--border)] to-transparent" />
+      </div>
 
-      {/* Real GitHub Activity Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">Live GitHub Activity</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real-time data from my GitHub profile showing contributions, repositories, and coding activity
-            </p>
-          </div>
-          <RealGitHubActivity />
-        </div>
-      </section>
+      {/* Act 1: The Problem I Solve — viewport 1-2 */}
+      <ActOne />
 
-      {/* Portfolio Analytics Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">Portfolio Analytics</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real-time statistics and visitor insights for this portfolio website
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <VisitorCounter />
-          </div>
-        </div>
-      </section>
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-[var(--border)] to-transparent" />
+      </div>
 
-      <FeaturedProjects />
+      {/* Act 2: How I Think — viewport 2-3 */}
+      <ActTwo />
+
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-[var(--border)] to-transparent" />
+      </div>
+
+      {/* Act 3: What I've Built — viewport 3-4 (horizontal scroll) */}
+      <ActThree />
+
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-[var(--border)] to-transparent" />
+      </div>
+
+      {/* Act 4: Let's Work Together — viewport 4 */}
+      <ActFour />
     </div>
-  )
+  );
 }

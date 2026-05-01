@@ -25,3 +25,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated sitemap
+public/sitemap*.xml
+public/robots.txt
+
+# Misc
+debug.log
+test.txt
+.DS_Store

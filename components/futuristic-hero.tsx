@@ -200,7 +200,7 @@ export function FuturisticHero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              B.Tech CSE (AI/ML) student at VIT Bhopal University. Building intelligent
+              B.Tech CSE (AI/ML) student at VIT University. Building intelligent
               systems that bridge the gap between cutting-edge AI research and real-world
               applications. Microsoft Learn Student Ambassador.
             </motion.p>

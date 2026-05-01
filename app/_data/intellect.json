@@ -1,0 +1,189 @@
+{
+  "profile": {
+    "name": "Garv Anand",
+    "role": "AI/ML Engineer",
+    "tagline": "Building production vision & language pipelines",
+    "university": "VIT — B.Tech CSE (AI/ML)",
+    "cgpa": "8.83",
+    "gradYear": "2027",
+    "contact": {
+      "email": "garvanand03@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/garv-anand-1bb36b270/",
+      "github": "https://github.com/Garvanand"
+    },
+    "philosophy": [
+      "I treat every ML model as a product — if it can't survive noisy inputs, edge cases, and production latency, it doesn't ship.",
+      "I believe the best AI systems are invisible to their users. ElderAI doesn't ask elderly people to learn technology; it meets them where they are — their voice.",
+      "I optimize for learning velocity over stack loyalty. PyTorch today, a new framework tomorrow — the fundamentals of linear algebra, probability, and systems thinking don't change."
+    ]
+  },
+
+  "stats": [
+    { "label": "Hackathon Finish", "value": "Top 1%", "context": "National — 5,000+ teams" },
+    { "label": "Research Accuracy", "value": "93%", "context": "Parkinson's Bi-LSTM" },
+    { "label": "CGPA", "value": "8.83", "context": "/ 10" },
+    { "label": "MLSA", "value": "Beta", "context": "Microsoft" }
+  ],
+
+  "skills": {
+    "vision": ["YOLOv8", "YOLOv11", "Table Transformer", "OpenCV", "Image Segmentation"],
+    "nlp": ["LangChain", "LlamaIndex", "LLaMA Parse", "Transformers", "Whisper"],
+    "mlCore": ["PyTorch", "TensorFlow", "scikit-learn", "Bi-LSTM", "CNNs", "GANs"],
+    "infra": ["Flask", "FastAPI", "Docker", "Azure AI", "Streamlit", "Next.js"]
+  },
+
+  "experience": [
+    {
+      "id": "exp-rova",
+      "role": "GenAI Solution Developer Intern",
+      "company": "ROVA (Botter Solutions Pvt Ltd)",
+      "period": "2025",
+      "focus": "Production PDF layout detection & document intelligence pipelines",
+      "stack": ["YOLOv8", "YOLOv11", "Microsoft Table Transformer", "LangChain", "LlamaIndex", "LLaMA Parse"],
+      "impact": "Built end-to-end vision-parsing pipelines processing 40+ page PDFs with complex table layouts at production scale",
+      "details": [
+        "Engineered YOLOv8-based table detection pipeline for structured data extraction from noisy, variable-layout PDFs",
+        "Integrated Microsoft Table Transformer for precise cell-level parsing of detected table regions",
+        "Built LlamaIndex RAG pipeline for semantic search over extracted document content",
+        "Handled real-world edge cases: rotated scans, multi-column layouts, nested tables, low-resolution inputs"
+      ]
+    },
+    {
+      "id": "exp-mlsa",
+      "role": "Microsoft Learn Student Ambassador (Beta)",
+      "company": "Microsoft",
+      "period": "Active",
+      "focus": "Azure AI & Cloud Advocacy",
+      "stack": ["Azure AI", "Azure ML", "Azure Document Intelligence"],
+      "impact": "3 workshops delivered to 150+ students, 92% satisfaction rate"
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "proj-elderai",
+      "title": "ElderAI",
+      "subtitle": "Voice-First AI Companion for the Elderly",
+      "problem_statement": "Elderly people who cannot navigate smartphone interfaces are locked out of the benefits of AI assistants. Existing solutions assume screen literacy.",
+      "my_specific_contribution": "Designed and built the full inference pipeline: voice capture → Whisper STT → intent classification → RAG-powered memory retrieval → LLM response generation → TTS output. Implemented the real-time memory layer that remembers user context across sessions.",
+      "description": "A multimodal AI companion that uses voice as the primary interaction modality — no screens, no typing. Combines speech-to-text, intent parsing, contextual memory (RAG), and natural voice responses to serve users who can't use traditional apps.",
+      "signal": "I design AI systems around human limitations, not around what's technically convenient.",
+      "flagship": true,
+      "impact_metric": "End-to-end voice AI pipeline with persistent memory across sessions",
+      "metrics": [
+        { "label": "Modality", "value": "Voice-first" },
+        { "label": "Memory", "value": "Persistent RAG" },
+        { "label": "Target Users", "value": "Elderly / Accessibility" }
+      ],
+      "tech_used": ["LLM", "Whisper STT", "RAG", "LlamaIndex", "Real-time Processing", "TTS", "Python"],
+      "architectureFlow": [
+        { "step": "Voice Input", "detail": "Microphone capture & audio preprocessing" },
+        { "step": "Whisper STT", "detail": "Speech-to-text transcription" },
+        { "step": "Intent Parser", "detail": "NLU classification & entity extraction" },
+        { "step": "Memory + RAG", "detail": "Context retrieval from persistent user history" },
+        { "step": "LLM Response", "detail": "Contextual answer generation" },
+        { "step": "TTS Output", "detail": "Natural voice response synthesis" }
+      ],
+      "github": "https://github.com/Garvanand/ElderAI",
+      "color": "#00e87b"
+    },
+    {
+      "id": "proj-parkinsons",
+      "title": "Parkinson's Detection",
+      "subtitle": "Early Detection from Speech via Bi-LSTM",
+      "problem_statement": "Early-stage Parkinson's disease is difficult to detect clinically. Speech degradation is one of the earliest biomarkers but requires specialized analysis.",
+      "my_specific_contribution": "Built the Bi-LSTM model architecture from scratch, implemented GAN-based data augmentation to handle the small dataset (195 entries), and achieved 93% accuracy. Authored the research paper submitted to Elsevier.",
+      "description": "Engineered a Bi-LSTM model for early Parkinson's disease detection from speech patterns, with GAN-based augmentation to overcome limited training data.",
+      "signal": "I can take a research problem from architecture design to publication-ready results.",
+      "flagship": false,
+      "impact_metric": "93% accuracy on benchmarked datasets — paper submitted to Elsevier AI in Medicine (Scopus, In Review)",
+      "metrics": [
+        { "label": "Accuracy", "value": "93%" },
+        { "label": "Architecture", "value": "Bi-LSTM + GAN" },
+        { "label": "Publication", "value": "Elsevier (In Review)" }
+      ],
+      "tech_used": ["Python", "Bi-LSTM", "GAN", "GRUs", "Streamlit", "NumPy", "scikit-learn"],
+      "github": "https://github.com/Garvanand/Parkinsons_detection-LSTM-",
+      "demo": "https://lstm-parkinsons.streamlit.app/",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "proj-ser",
+      "title": "Multimodal Speech Emotion Recognition",
+      "subtitle": "Deep Learning for Virtual Classroom Engagement",
+      "problem_statement": "Virtual classrooms lack real-time feedback on student engagement. Instructors cannot gauge emotional state from a grid of muted video feeds.",
+      "my_specific_contribution": "Built the multimodal fusion layer combining acoustic (Bi-LSTM), visual (CNN), and linguistic (Transformer) feature streams. Trained on RAVDESS and CREMA-D datasets with custom preprocessing pipelines.",
+      "description": "A multimodal deep learning framework that fuses audio, video, and text signals to classify student emotional states in real-time during virtual lectures.",
+      "signal": "I can architect multi-stream deep learning systems that fuse heterogeneous data modalities.",
+      "flagship": false,
+      "impact_metric": "Three-stream fusion model (Bi-LSTM + CNN + Transformer) trained on RAVDESS & CREMA-D",
+      "metrics": [
+        { "label": "Modalities", "value": "Audio + Video + Text" },
+        { "label": "Models", "value": "Bi-LSTM, CNN, Transformer" },
+        { "label": "Datasets", "value": "RAVDESS, CREMA-D" }
+      ],
+      "tech_used": ["TensorFlow", "LSTM", "CNNs", "Transformers", "Flask", "React", "Python"],
+      "github": "https://github.com/Garvanand/SER.git",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "proj-vitalai",
+      "title": "VITAL-AI",
+      "subtitle": "ML-Powered Health Risk Prediction",
+      "problem_statement": "Individuals lack proactive health risk assessment — they only visit doctors after symptoms appear. Early warning systems could trigger preventive action.",
+      "my_specific_contribution": "Built the Random Forest risk prediction engine and designed the Flask API layer. Integrated Google Fit data sync for continuous vitals monitoring. Built at HackByte 3.0 (IIITDM Jabalpur).",
+      "description": "A health monitoring platform combining wearable data sync with real-time disease risk prediction using Random Forest models and an intuitive dashboard.",
+      "signal": "I can build end-to-end ML products under hackathon pressure — from data pipeline to deployed UI.",
+      "flagship": false,
+      "impact_metric": "Real-time risk prediction from combined vitals data — built in 36 hours at HackByte 3.0",
+      "metrics": [
+        { "label": "Event", "value": "HackByte 3.0" },
+        { "label": "Model", "value": "Random Forest" },
+        { "label": "Features", "value": "Real-time Risk Prediction" }
+      ],
+      "tech_used": ["Next.js", "Flask", "Supabase", "Gemini API", "Random Forest", "Python"],
+      "github": "https://github.com/Garvanand/VITAL-AI2",
+      "demo": "https://devfolio.co/projects/vitalai-59ee",
+      "color": "#06b6d4"
+    }
+  ],
+
+  "achievements": [
+    {
+      "id": "ach-bob",
+      "title": "Bank of Baroda Hackathon — Top 20",
+      "detail": "Top 1% finish among 5,000+ participating teams nationally",
+      "verifiable": true
+    },
+    {
+      "id": "ach-amazon",
+      "title": "Amazon Sambhav — Top 5%",
+      "detail": "National-level hackathon finish",
+      "verifiable": true
+    },
+    {
+      "id": "ach-research",
+      "title": "Elsevier Research Paper (In Review)",
+      "detail": "Parkinson's Detection via Bi-LSTM — submitted to AI in Medicine (Scopus indexed)",
+      "verifiable": true
+    },
+    {
+      "id": "ach-mlsa",
+      "title": "MLSA Beta — Microsoft",
+      "detail": "Microsoft Learn Student Ambassador, Beta tier — 3 workshops, 150+ attendees",
+      "verifiable": true
+    },
+    {
+      "id": "ach-cgpa",
+      "title": "8.83 / 10 CGPA",
+      "detail": "VIT — B.Tech CSE (AI/ML), 2023–2027",
+      "verifiable": true
+    },
+    {
+      "id": "ach-oci",
+      "title": "Oracle Cloud Infrastructure Certified",
+      "detail": "Oracle OCI Foundations certification",
+      "verifiable": true
+    }
+  ]
+}
