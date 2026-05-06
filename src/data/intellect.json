@@ -1,0 +1,409 @@
+{
+  "profile": {
+    "name": "Garv Anand",
+    "role": "AI/ML Engineer",
+    "tagline": "Building production vision & language pipelines",
+    "university": "VIT — B.Tech CSE (AI/ML)",
+    "cgpa": "8.83",
+    "gradYear": "2027",
+    "contact": {
+      "email": "garvanand03@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/garv-anand-1bb36b270/",
+      "github": "https://github.com/Garvanand"
+    },
+    "philosophy": [
+      "I treat every ML model as a product — if it can't survive noisy inputs, edge cases, and production latency, it doesn't ship.",
+      "I believe the best AI systems are invisible to their users. ElderAI doesn't ask elderly people to learn technology; it meets them where they are — their voice.",
+      "I optimize for learning velocity over stack loyalty. PyTorch today, a new framework tomorrow — the fundamentals of linear algebra, probability, and systems thinking don't change."
+    ]
+  },
+
+  "stats": [
+    { "label": "Hackathon Finish", "value": "Top 1%", "context": "National — 5,000+ teams" },
+    { "label": "Research Accuracy", "value": "93%", "context": "Parkinson's Bi-LSTM" },
+    { "label": "CGPA", "value": "8.83", "context": "/ 10" },
+    { "label": "MLSA", "value": "Beta", "context": "Microsoft" }
+  ],
+
+  "skills": {
+    "vision": ["YOLOv8", "YOLOv11", "MediaPipe", "Table Transformer", "OpenCV", "Image Segmentation"],
+    "nlp": ["LangChain", "LlamaIndex", "LLaMA Parse", "Transformers", "Whisper", "Groq API"],
+    "mlCore": ["PyTorch", "TensorFlow", "scikit-learn", "Bi-LSTM", "CNNs", "PPO (RL)", "SUMO"],
+    "infra": ["Kotlin", "Jetpack Compose", "FastAPI", "Docker", "Supabase", "Next.js", "Vitest"]
+  },
+
+  "experience": [
+    {
+      "id": "exp-rova",
+      "role": "GenAI Solution Developer Intern",
+      "company": "ROVA (Botter Solutions Pvt Ltd)",
+      "period": "2025",
+      "focus": "Production PDF layout detection & document intelligence pipelines",
+      "stack": ["YOLOv8", "YOLOv11", "Microsoft Table Transformer", "LangChain", "LlamaIndex", "LLaMA Parse"],
+      "impact": "Built end-to-end vision-parsing pipelines processing 40+ page PDFs with complex table layouts at production scale",
+      "details": [
+        "Engineered YOLOv8-based table detection pipeline for structured data extraction from noisy, variable-layout PDFs",
+        "Integrated Microsoft Table Transformer for precise cell-level parsing of detected table regions",
+        "Built LlamaIndex RAG pipeline for semantic search over extracted document content",
+        "Handled real-world edge cases: rotated scans, multi-column layouts, nested tables, low-resolution inputs"
+      ]
+    },
+    {
+      "id": "exp-mlsa",
+      "role": "Microsoft Learn Student Ambassador (Beta)",
+      "company": "Microsoft",
+      "period": "Active",
+      "focus": "Azure AI & Cloud Advocacy",
+      "stack": ["Azure AI", "Azure ML", "Azure Document Intelligence"],
+      "impact": "3 workshops delivered to 150+ students, 92% satisfaction rate"
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "proj-elderai",
+      "title": "ElderAI",
+      "subtitle": "Voice-First AI Companion for the Elderly",
+      "problem_statement": "Elderly people who cannot navigate smartphone interfaces are locked out of the benefits of AI assistants. Existing solutions assume screen literacy.",
+      "my_specific_contribution": "Designed and built the full inference pipeline: voice capture → Whisper STT → intent classification → RAG-powered memory retrieval → LLM response generation → TTS output. Implemented the real-time memory layer that remembers user context across sessions.",
+      "description": "A multimodal AI companion that uses voice as the primary interaction modality — no screens, no typing. Combines speech-to-text, intent parsing, contextual memory (RAG), and natural voice responses to serve users who can't use traditional apps.",
+      "signal": "I design AI systems around human limitations, not around what's technically convenient.",
+      "flagship": true,
+      "impact_metric": "End-to-end voice AI pipeline with persistent memory across sessions",
+      "metrics": [
+        { "label": "Modality", "value": "Voice-first" },
+        { "label": "Memory", "value": "Persistent RAG" },
+        { "label": "Target Users", "value": "Elderly / Accessibility" }
+      ],
+      "tech_used": ["LLM", "Whisper STT", "RAG", "LlamaIndex", "Real-time Processing", "TTS", "Python"],
+      "architectureFlow": [
+        { "step": "Voice Input", "detail": "Microphone capture & audio preprocessing" },
+        { "step": "Whisper STT", "detail": "Speech-to-text transcription" },
+        { "step": "Intent Parser", "detail": "NLU classification & entity extraction" },
+        { "step": "Memory + RAG", "detail": "Context retrieval from persistent user history" },
+        { "step": "LLM Response", "detail": "Contextual answer generation" },
+        { "step": "TTS Output", "detail": "Natural voice response synthesis" }
+      ],
+      "github": "https://github.com/Garvanand/ElderAI",
+      "dev_tag": "Stable Release",
+      "color": "#00e87b"
+    },
+    {
+      "id": "proj-parkinsons",
+      "title": "Parkinson's Detection",
+      "subtitle": "Early Detection from Speech via Bi-LSTM",
+      "problem_statement": "Early-stage Parkinson's disease is difficult to detect clinically. Speech degradation is one of the earliest biomarkers but requires specialized analysis.",
+      "my_specific_contribution": "Built the Bi-LSTM model architecture from scratch, implemented GAN-based data augmentation to handle the small dataset (195 entries), and achieved 93% accuracy. Authored the research paper submitted to Elsevier.",
+      "description": "Engineered a Bi-LSTM model for early Parkinson's disease detection from speech patterns, with GAN-based augmentation to overcome limited training data.",
+      "signal": "I can take a research problem from architecture design to publication-ready results.",
+      "flagship": false,
+      "impact_metric": "93% accuracy on benchmarked datasets — paper submitted to Elsevier AI in Medicine (Scopus, In Review)",
+      "metrics": [
+        { "label": "Accuracy", "value": "93%" },
+        { "label": "Architecture", "value": "Bi-LSTM + GAN" },
+        { "label": "Publication", "value": "Elsevier (In Review)" }
+      ],
+      "tech_used": ["Python", "Bi-LSTM", "GAN", "GRUs", "Streamlit", "NumPy", "scikit-learn"],
+      "github": "https://github.com/Garvanand/Parkinsons_detection-LSTM-",
+      "demo": "https://lstm-parkinsons.streamlit.app/",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "proj-ser",
+      "title": "Multimodal Speech Emotion Recognition",
+      "subtitle": "Deep Learning for Virtual Classroom Engagement",
+      "problem_statement": "Virtual classrooms lack real-time feedback on student engagement. Instructors cannot gauge emotional state from a grid of muted video feeds.",
+      "my_specific_contribution": "Built the multimodal fusion layer combining acoustic (Bi-LSTM), visual (CNN), and linguistic (Transformer) feature streams. Trained on RAVDESS and CREMA-D datasets with custom preprocessing pipelines.",
+      "description": "A multimodal deep learning framework that fuses audio, video, and text signals to classify student emotional states in real-time during virtual lectures.",
+      "signal": "I can architect multi-stream deep learning systems that fuse heterogeneous data modalities.",
+      "flagship": false,
+      "impact_metric": "Three-stream fusion model (Bi-LSTM + CNN + Transformer) trained on RAVDESS & CREMA-D",
+      "metrics": [
+        { "label": "Modalities", "value": "Audio + Video + Text" },
+        { "label": "Models", "value": "Bi-LSTM, CNN, Transformer" },
+        { "label": "Datasets", "value": "RAVDESS, CREMA-D" }
+      ],
+      "tech_used": ["TensorFlow", "LSTM", "CNNs", "Transformers", "Flask", "React", "Python"],
+      "github": "https://github.com/Garvanand/SER.git",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "proj-vitalai",
+      "title": "VITAL-AI",
+      "subtitle": "ML-Powered Health Risk Prediction",
+      "problem_statement": "Individuals lack proactive health risk assessment — they only visit doctors after symptoms appear. Early warning systems could trigger preventive action.",
+      "my_specific_contribution": "Built the Random Forest risk prediction engine and designed the Flask API layer. Integrated Google Fit data sync for continuous vitals monitoring. Built at HackByte 3.0 (IIITDM Jabalpur).",
+      "description": "A health monitoring platform combining wearable data sync with real-time disease risk prediction using Random Forest models and an intuitive dashboard.",
+      "signal": "I can build end-to-end ML products under hackathon pressure — from data pipeline to deployed UI.",
+      "flagship": false,
+      "impact_metric": "Real-time risk prediction from combined vitals data — built in 36 hours at HackByte 3.0",
+      "metrics": [
+        { "label": "Event", "value": "HackByte 3.0" },
+        { "label": "Model", "value": "Random Forest" },
+        { "label": "Features", "value": "Real-time Risk Prediction" }
+      ],
+      "tech_used": ["Next.js", "Flask", "Supabase", "Gemini API", "Random Forest", "Python"],
+      "github": "https://github.com/Garvanand/VITAL-AI2",
+      "demo": "https://devfolio.co/projects/vitalai-59ee",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "proj-drowseguard",
+      "title": "DrowseGuard",
+      "subtitle": "Real-Time Driver Drowsiness Detection System",
+      "problem_statement": "Driver fatigue is a leading cause of highway accidents. Passive monitoring systems are often too slow or inaccurate for high-speed response.",
+      "my_specific_contribution": "Developed the real-time CV pipeline using MediaPipe for high-fidelity facial landmark tracking. Engineered a custom EAR (Eye Aspect Ratio) calculation logic that handles varying lighting conditions and eyewear, achieving sub-100ms inference latency.",
+      "description": "A safety-critical computer vision system that monitors driver fatigue in real-time, using EAR and MAR (Mouth Aspect Ratio) analysis to trigger instant alerts upon detection of microsleep or persistent yawning.",
+      "signal": "I build vision systems that operate with production-grade reliability in mission-critical environments.",
+      "flagship": false,
+      "impact_metric": "Sub-100ms inference latency on standard mobile hardware using optimized landmark pipelines",
+      "metrics": [
+        { "label": "Latency", "value": "<100ms" },
+        { "label": "Tracking", "value": "468 Landmarks" },
+        { "label": "Tech", "value": "MediaPipe + OpenCV" }
+      ],
+      "tech_used": ["Python", "OpenCV", "MediaPipe", "NumPy", "Tkinter"],
+      "github": "https://github.com/Garvanand/drowsegaurd",
+      "color": "#ef4444"
+    },
+    {
+      "id": "proj-kindkart",
+      "title": "KindKart",
+      "subtitle": "Donation-Centric Marketplace for Social Impact",
+      "problem_statement": "The bridge between excess household items and NGO requirements is broken. Donors lack visibility, and NGOs face massive logistical hurdles in item verification.",
+      "my_specific_contribution": "Architected the dual-app system (Donor & NGO portals). Implemented the points-based 'Karma Marketplace' gamification layer and the secure Firebase-driven item verification workflow. Optimized the Android UI for a premium, startup-grade experience.",
+      "description": "A production-grade philanthropic ecosystem that facilitates seamless item donations through a gamified marketplace, featuring real-time tracking, role-based access control, and advanced UI micro-interactions.",
+      "signal": "I can architect complex, multi-user platforms that balance social impact with premium user experience.",
+      "flagship": false,
+      "impact_metric": "Full-stack mobile ecosystem with localized NGO/Donor role-based workflows",
+      "metrics": [
+        { "label": "Stack", "value": "MVVM + Firebase" },
+        { "label": "UX", "value": "Premium Micro-interactions" },
+        { "label": "Feature", "value": "Karma Points System" }
+      ],
+      "tech_used": ["Android SDK", "Kotlin", "Firebase", "Zustand", "Jetpack Compose", "Tailwind CSS"],
+      "github": "https://github.com/Garvanand/KindKart",
+      "dev_tag": "Active Scaling",
+      "color": "#f97316"
+    },
+    {
+      "id": "proj-traffic-rl",
+      "title": "RL-Traffic-Lights",
+      "subtitle": "Multi-Agent Reinforcement Learning for Urban Flow",
+      "problem_statement": "Fixed-time traffic signals are inefficient in dynamic urban environments, causing unnecessary congestion and increased CO2 emissions.",
+      "my_specific_contribution": "Implemented Independent Multi-Agent RL agents using the PPO (Proximal Policy Optimization) algorithm. Built the simulation bridge between PyTorch and SUMO (TraCI) to enable real-time intersection control and state feedback.",
+      "description": "A sophisticated ML project that applies MARL to optimize traffic signal timings. Intersections act as autonomous agents that learn to minimize global waiting times through continuous simulation and reward shaping.",
+      "signal": "I apply state-of-the-art RL research to solve complex, real-world infrastructure optimization problems.",
+      "flagship": false,
+      "impact_metric": "Simulated waiting time reduction via PPO Actor-Critic optimization",
+      "metrics": [
+        { "label": "Algorithm", "value": "PPO (RL)" },
+        { "label": "Simulator", "value": "SUMO (TraCI)" },
+        { "label": "Logging", "value": "TensorBoard" }
+      ],
+      "tech_used": ["Python", "PyTorch", "SUMO", "TraCI", "Streamlit", "TensorBoard"],
+      "github": "https://github.com/Garvanand/RL-Traffic-Lights",
+      "color": "#10b981"
+    },
+    {
+      "id": "proj-rcbs",
+      "title": "RCBS",
+      "subtitle": "Production-Grade Indian Banking Simulation",
+      "problem_statement": "Most banking simulations ignore the complexity of real-world constraints like RBI regulations, transaction idempotency, and multi-agent fraud monitoring.",
+      "my_specific_contribution": "Architected the core banking logic using SQL transactions for strict data integrity. Built the 'Agentic Core' featuring Fraud and Compliance agents that monitor UPI/NEFT flows in real-time. Localized the entire system for RBI standards.",
+      "description": "The Resident Banking India System (RBIS) is a high-fidelity simulation of an Indian banking backend, implementing KYC, idempotent UPI/IMPS transactions, and agent-driven regulatory oversight.",
+      "signal": "I build fintech systems that respect industrial-strength constraints: idempotency, atomicity, and regulatory compliance.",
+      "flagship": false,
+      "impact_metric": "Multi-agent architecture (Fraud, Compliance, Load) for regulatory simulation",
+      "metrics": [
+        { "label": "Standards", "value": "RBI Compliance" },
+        { "label": "Integrity", "value": "SQL Transactions" },
+        { "label": "AI Agents", "value": "4 Specialized Agents" }
+      ],
+      "tech_used": ["Next.js 15", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+      "github": "https://github.com/Garvanand/RCBS",
+      "dev_tag": "Under Development",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "proj-trustiq",
+      "title": "TrustIQ",
+      "subtitle": "AI-Powered Multi-Standard Compliance Assessment",
+      "problem_statement": "Enterprise compliance across multiple ISO standards (27001, 37001, etc.) is a manual, error-prone process involving thousands of pages of policy documents.",
+      "my_specific_contribution": "Built the 7-agent AI pipeline that orchestrates gap analysis and evidence validation. Developed the 3-tier hybrid scoring engine that cascades from GenW.AI to local models, ensuring 100% uptime for assessments.",
+      "description": "Developed for Deloitte's Hacksplosion 2026, TrustIQ is an enterprise compliance intelligence platform that parses policies and validates readiness across 6+ ISO standards simultaneously using specialized AI agents.",
+      "signal": "I design enterprise-scale agentic workflows that transform massive unstructured data into actionable intelligence.",
+      "flagship": false,
+      "impact_metric": "7-agent pipeline for ISO compliance automation — Deloitte Hacksplosion 2026 Submission",
+      "metrics": [
+        { "label": "Agents", "value": "7 Specialized" },
+        { "label": "Standards", "value": "6+ ISO Standards" },
+        { "label": "Pipeline", "value": "3-Tier Hybrid" }
+      ],
+      "tech_used": ["React 19", "Express 5", "Groq API", "PostgreSQL", "Docker", "Python ML"],
+      "github": "https://github.com/Garvanand/TrustIQ",
+      "dev_tag": "Scaling",
+      "color": "#6366f1"
+    },
+    {
+      "id": "proj-youtube-solver",
+      "title": "YouTube Doubt Solver",
+      "subtitle": "Context-Aware Video Learning Companion",
+      "problem_statement": "Learners often get stuck on specific concepts in long technical tutorials but lack a way to get immediate, video-contextual clarification.",
+      "my_specific_contribution": "Engineered the RAG pipeline for video content. Built the logic to extract and index transcripts with temporal metadata, enabling time-stamped responses that point users to the exact moment a concept is explained.",
+      "description": "An AI assistant that provides real-time, video-specific Q&A for YouTube content, using contextual understanding to clarify difficult concepts without leaving the video scope.",
+      "signal": "I build intuitive AI tools that bridge the gap between static content and active learning.",
+      "flagship": false,
+      "impact_metric": "Video-contextual RAG with precise temporal referencing",
+      "metrics": [
+        { "label": "Feature", "value": "Time-Stamped Q&A" },
+        { "label": "Scope", "value": "Video-Specific" },
+        { "label": "Tech", "value": "RAG + Transcript API" }
+      ],
+      "tech_used": ["Python", "Gemini API", "YouTube Transcript API", "LangChain", "Streamlit"],
+      "github": "https://github.com/Garvanand/Youtube-Doubt-Solver",
+      "dev_tag": "Beta",
+      "color": "#ec4899"
+    },
+    {
+      "id": "proj-foodmind",
+      "title": "FoodMind",
+      "subtitle": "Production-Grade Nutrition Intelligence",
+      "problem_statement": "Most health apps offer generic advice. Production systems require high-fidelity data validation, accessible UIs, and hardened security to be viable.",
+      "my_specific_contribution": "Led the hardening for Cloud Run deployment. Achieved 100% compliance in accessibility (W3C ARIA) and security (CSP/DOMPurify). Integrated Firebase Analytics and automated test suites for continuous verification.",
+      "description": "A nutritionist-focused intelligence app hardened for enterprise deployment, featuring personalized diet planning, real-time nutrient tracking, and a 100% accessibility/security score.",
+      "signal": "I take ML prototypes and transform them into hardened, production-ready enterprise applications.",
+      "flagship": false,
+      "impact_metric": "100% Compliance Score (Accessibility, Security, Testing) — Deployed on Google Cloud Run",
+      "metrics": [
+        { "label": "Deployment", "value": "Google Cloud Run" },
+        { "label": "Security", "value": "CSP + Sanitization" },
+        { "label": "Compliance", "value": "100% Score" }
+      ],
+      "tech_used": ["Next.js", "Vitest", "Firebase", "Google Cloud", "DOMPurify", "Tailwind CSS"],
+      "github": "https://github.com/Garvanand/FoodMind",
+      "color": "#84cc16"
+    },
+    {
+      "id": "proj-interview-ai",
+      "title": "Interview AI-er",
+      "subtitle": "AI-Powered Mock Interview Platform",
+      "problem_statement": "Job seekers lack a low-cost, high-fidelity way to practice interviews with realistic feedback and performance tracking.",
+      "my_specific_contribution": "Architected the full-stack system integrating Next.js with a Flask backend. Developed the AI evaluation pipeline using Gemini for real-time answer scoring and the proctoring logic that detects anomalies during sessions.",
+      "description": "An intelligent mock interview ecosystem that generates dynamic questions, evaluates responses with AI, and provides detailed performance metrics while monitoring session integrity.",
+      "signal": "I build full-stack AI platforms that bridge the gap between skill acquisition and professional assessment.",
+      "flagship": false,
+      "impact_metric": "End-to-end AI interview lifecycle with automated proctoring and feedback",
+      "metrics": [
+        { "label": "Backend", "value": "Flask + Supabase" },
+        { "label": "AI Engine", "value": "Gemini AI" },
+        { "label": "Security", "value": "Anomaly Detection" }
+      ],
+      "tech_used": ["Next.js", "Flask", "Python", "Supabase", "Gemini API", "Tailwind CSS"],
+      "github": "https://github.com/Garvanand/Interview-ai-er",
+      "dev_tag": "Under Development",
+      "color": "#f43f5e"
+    },
+    {
+      "id": "proj-rajasthan-club",
+      "title": "Rajasthan Club",
+      "subtitle": "Community Platform for Cultural Visibility",
+      "problem_statement": "Cultural organizations often lack a centralized digital presence to coordinate events and showcase their heritage to a broader audience.",
+      "my_specific_contribution": "Designed and developed the responsive web interface using React and Tailwind CSS. Implemented a dynamic event showcase and cultural archive to preserve and promote club activities.",
+      "description": "A community-focused web platform built to enhance the digital footprint of the Rajasthan Club, featuring event tracking, cultural storytelling, and a modern, responsive user interface.",
+      "signal": "I create accessible, community-driven web experiences that solve visibility problems for local organizations.",
+      "flagship": false,
+      "impact_metric": "Responsive community hub for cultural event management and heritage archiving",
+      "metrics": [
+        { "label": "Framework", "value": "React" },
+        { "label": "Styling", "value": "Tailwind CSS" },
+        { "label": "Deployment", "value": "Vercel" }
+      ],
+      "tech_used": ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+      "github": "https://github.com/Garvanand/Rajasthan_Club.git",
+      "demo": "https://rajasthan-club.vercel.app/",
+      "color": "#fbbf24"
+    }
+  ],
+
+  "achievements": [
+    {
+      "id": "ach-bob",
+      "title": "Bank of Baroda Hackathon — Top 20",
+      "detail": "Top 1% finish among 5,000+ participating teams nationally",
+      "verifiable": true
+    },
+    {
+      "id": "ach-amazon",
+      "title": "Amazon Sambhav — Top 5%",
+      "detail": "National-level hackathon finish",
+      "verifiable": true
+    },
+    {
+      "id": "ach-research",
+      "title": "Elsevier Research Paper (In Review)",
+      "detail": "Parkinson's Detection via Bi-LSTM — submitted to AI in Medicine (Scopus indexed)",
+      "verifiable": true
+    },
+    {
+      "id": "ach-mlsa",
+      "title": "MLSA Beta — Microsoft",
+      "detail": "Microsoft Learn Student Ambassador, Beta tier — 3 workshops, 150+ attendees",
+      "verifiable": true
+    },
+    {
+      "id": "ach-cgpa",
+      "title": "8.83 / 10 CGPA",
+      "detail": "VIT — B.Tech CSE (AI/ML), 2023–2027",
+      "verifiable": true
+    },
+    {
+      "id": "ach-oci",
+      "title": "Oracle Cloud Infrastructure Certified",
+      "detail": "Oracle OCI Foundations certification",
+      "verifiable": true
+    },
+    {
+      "id": "ach-aws-cloud",
+      "title": "AWS Certified Cloud Practitioner",
+      "detail": "Verified AWS Cloud certification (Credential: f4e86584ef944088ba65dd7124f3ff0a)",
+      "link": "https://cp.certmetrics.com/amazon/en/public/verify/credential/f4e86584ef944088ba65dd7124f3ff0a",
+      "verifiable": true
+    },
+    {
+      "id": "ach-google-it",
+      "title": "Google IT Support Professional",
+      "detail": "Professional IT support certification by Google",
+      "link": "https://www.credly.com/badges/933ac21b-b858-45fa-a18a-2fd15c0af900/public_url",
+      "verifiable": true
+    },
+    {
+      "id": "ach-azure-vision",
+      "title": "Azure AI Vision Specialist",
+      "detail": "Microsoft Applied Skills: Build an Azure AI Vision solution",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/garvanand-5192/3494602C7CE57D4A?sharingId",
+      "verifiable": true
+    },
+    {
+      "id": "ach-azure-doc",
+      "title": "Azure AI Document Intelligence",
+      "detail": "Microsoft Applied Skills: Create an intelligent document processing solution",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/garvanand-5192/E5A4242105D3A817?sharingId",
+      "verifiable": true
+    },
+    {
+      "id": "ach-azure-lang",
+      "title": "Azure AI Language Specialist",
+      "detail": "Microsoft Applied Skills: Build a natural language processing solution",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/garvanand-5192/1E71505FDE8FFBD4?sharingId",
+      "verifiable": true
+    },
+    {
+      "id": "ach-cisco-net",
+      "title": "Networking Basics (CISCO)",
+      "detail": "Cisco Networking Academy certification",
+      "link": "https://www.credly.com/badges/184a21a7-4c0b-41f7-82aa-f7417032983b/public_url",
+      "verifiable": true
+    }
+  ]
+}
