@@ -3,17 +3,17 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { GlowButton } from "@/components/shared/ui"
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  MessageCircle, 
-  Send, 
-  ArrowRight, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Send,
+  ArrowRight,
   ArrowLeft,
-  ShieldCheck, 
-  Fingerprint, 
-  Cpu, 
+  ShieldCheck,
+  Fingerprint,
+  Cpu,
   Briefcase,
   Lightbulb,
   Code2,
@@ -44,7 +44,7 @@ export default function ContactPage() {
     message: "",
     resourceLink: "",
   })
-  
+
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const smoothX = useSpring(mouseX, { damping: 50, stiffness: 200 })
@@ -85,7 +85,7 @@ export default function ContactPage() {
   }
 
   const getStageColor = () => {
-    switch(stage) {
+    switch (stage) {
       case 'profile': return '#00D4FF';
       case 'objective': return '#7C3AED';
       case 'payload': return '#00FF87';
@@ -96,12 +96,12 @@ export default function ContactPage() {
   return (
     <div className="relative w-full min-h-screen bg-[#050508] text-white flex flex-col justify-center px-6 md:px-12 py-12 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <motion.div 
+        <motion.div
           className="absolute w-[1200px] h-[1200px] opacity-15 blur-[150px] rounded-full"
           animate={{ backgroundColor: getStageColor() }}
           style={{ x: smoothX, y: smoothY, translateX: "-50%", translateY: "-50%" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"
           style={{ x: useTransform(smoothX, [0, 1500], [5, -5]), y: useTransform(smoothY, [0, 1000], [5, -5]) }}
         />
@@ -164,11 +164,11 @@ export default function ContactPage() {
                     <div className="space-y-10">
                       <div className="space-y-3">
                         <label className="font-mono text-[10px] font-black uppercase text-white/40">Full Name</label>
-                        <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full bg-transparent border-b-2 border-white/10 py-4 font-display text-4xl focus:outline-none focus:border-[#00D4FF] text-white italic font-black uppercase tracking-tight" />
+                        <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full bg-transparent border-b-2 border-white/10 py-4 font-display text-4xl focus:outline-none focus:border-[#00D4FF] text-white italic font-black uppercase tracking-tight" />
                       </div>
                       <div className="space-y-3">
                         <label className="font-mono text-[10px] font-black uppercase text-white/40">Email Address</label>
-                        <input type="text" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-transparent border-b-2 border-white/10 py-4 font-display text-4xl focus:outline-none focus:border-[#00D4FF] text-white italic font-black uppercase tracking-tight" />
+                        <input type="text" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full bg-transparent border-b-2 border-white/10 py-4 font-display text-4xl focus:outline-none focus:border-[#00D4FF] text-white italic font-black uppercase tracking-tight" />
                       </div>
                     </div>
                     <button onClick={() => setStage("objective")} className="font-display text-3xl font-black uppercase italic text-white flex items-center gap-3 hover:text-[#00D4FF] transition-all">Next <ArrowRight className="w-6 h-6" /></button>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {TOPIC_MENU.map((item) => (
-                        <button key={item.id} onClick={() => setFormData({...formData, topic: item.id})} className={`p-8 border-2 rounded-[32px] text-left transition-all ${formData.topic === item.id ? 'bg-white text-black' : 'bg-white/5 border-white/10 hover:border-white/30'}`}>
+                        <button key={item.id} onClick={() => setFormData({ ...formData, topic: item.id })} className={`p-8 border-2 rounded-[32px] text-left transition-all ${formData.topic === item.id ? 'bg-white text-black' : 'bg-white/5 border-white/10 hover:border-white/30'}`}>
                           <div className="font-display text-xl font-black uppercase italic">{item.label}</div>
                           <div className="font-mono text-[9px] uppercase mt-1 opacity-50">{item.desc}</div>
                         </button>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                       <div className="w-12 h-12 rounded-xl bg-[#00FF87] text-black flex items-center justify-center font-bold text-xl">03</div>
                       <div className="font-mono text-sm font-black uppercase tracking-widest text-[#00FF87]">Payload</div>
                     </div>
-                    <textarea rows={5} placeholder="Inject data..." className="w-full bg-white/5 border-2 border-white/10 rounded-[32px] p-8 font-display text-2xl text-white italic focus:border-[#00FF87] outline-none" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} />
+                    <textarea rows={5} placeholder="Inject data..." className="w-full bg-white/5 border-2 border-white/10 rounded-[32px] p-8 font-display text-2xl text-white italic focus:border-[#00FF87] outline-none" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
                     <button onClick={handleTransmit} className="px-12 py-5 bg-[#00FF87] text-black font-black uppercase italic rounded-2xl shadow-xl hover:scale-105 transition-all">Transmit Signal</button>
                   </motion.div>
                 )}
