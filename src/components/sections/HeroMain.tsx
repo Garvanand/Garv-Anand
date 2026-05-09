@@ -28,7 +28,7 @@ export function HeroSection() {
 
   return (
     <>
-      <section ref={ref} className="relative h-screen w-full flex items-center overflow-hidden">
+      <section ref={ref} className="relative h-[100dvh] min-h-[600px] w-full flex items-center overflow-hidden">
         {/* Three.js particle background */}
         <div className="absolute inset-0 z-0 pointer-events-auto">
           <CyanParticleScene />
@@ -42,31 +42,31 @@ export function HeroSection() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ...stagger(0) }}
-          className="absolute top-20 left-6 md:left-10 z-10"
+          className="absolute top-16 sm:top-20 left-4 sm:left-6 md:left-10 z-10"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00FF87]/20 bg-[#00FF87]/[0.06]">
+          <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-[#00FF87]/20 bg-[#00FF87]/[0.06]">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF87] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00FF87]" />
             </span>
-            <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#00FF87]">
+            <span className="font-mono text-[8px] sm:text-[10px] tracking-[0.1em] sm:tracking-[0.15em] uppercase text-[#00FF87]">
               Available for internships — Summer 2026
             </span>
           </div>
         </motion.div>
 
         {/* Main content */}
-        <motion.div style={{ opacity, y }} className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
+        <motion.div style={{ opacity, y }} className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+          <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between gap-8 lg:gap-12">
 
             {/* Left side — text */}
-            <div className="max-w-2xl">
+            <div className="max-w-2xl w-full">
               {/* Main heading */}
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ...stagger(1), ease: [0.16, 1, 0.3, 1] }}
-                className="font-display text-[clamp(2.5rem,6vw,5.5rem)] font-bold leading-[1.05] tracking-tighter"
+                className="font-display text-[clamp(2rem,7vw,5.5rem)] font-bold leading-[1.05] tracking-tighter"
               >
                 <span className="text-[var(--text)]">Building AI that</span>
                 <br />
@@ -78,7 +78,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ...stagger(2) }}
-                className="mt-6 font-mono text-sm md:text-base text-[var(--text-muted)] leading-relaxed"
+                className="mt-4 sm:mt-6 font-mono text-xs sm:text-sm md:text-base text-[var(--text-muted)] leading-relaxed"
               >
                 B.Tech CSE (AI/ML) @ VIT{' '}
                 <span className="text-[var(--text-dim)]">·</span>{' '}
@@ -92,7 +92,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ...stagger(3) }}
-                className="mt-8 flex flex-wrap gap-4"
+                className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4"
               >
                 <GlowButton href="#work" variant="primary">See My Work</GlowButton>
                 <GlowButton variant="secondary" onClick={() => setTerminalOpen(true)}>
@@ -109,7 +109,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ...stagger(4) }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl"
+            className="mt-10 sm:mt-16 grid grid-cols-3 gap-2 sm:gap-3 max-w-3xl"
           >
             <MetricCard value="8.83" label="CGPA" context="/ 10" />
             <MetricCard value="456+" label="LeetCode" context="Problems Solved" />
@@ -117,12 +117,12 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — hidden on small mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.4 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
+          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 hidden sm:flex"
         >
           <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-[var(--text-dim)] mb-3">Scroll</span>
           <div className="w-[1px] h-8 bg-gradient-to-b from-[var(--text-dim)] to-transparent" />

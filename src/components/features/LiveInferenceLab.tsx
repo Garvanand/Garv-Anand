@@ -12,7 +12,7 @@ export function LiveInferenceLab() {
 
   return (
     <div className="w-full glass-card rounded-2xl overflow-hidden border border-white/10">
-      <div className="border-b border-white/10 bg-black/40 px-6 py-4 flex flex-wrap gap-6 items-center">
+      <div className="border-b border-white/10 bg-black/40 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row gap-3 sm:gap-6 items-start sm:items-center">
         <h3 className="font-display font-bold text-white text-lg mr-4">Live Inference Lab</h3>
         
         <div className="flex gap-1 bg-white/5 p-1 rounded-lg">
@@ -28,7 +28,7 @@ export function LiveInferenceLab() {
         </div>
       </div>
 
-      <div className="p-6 md:p-8 min-h-[400px]">
+      <div className="p-4 sm:p-6 md:p-8 min-h-[350px] sm:min-h-[400px]">
         <AnimatePresence mode="wait">
           {activeTab === 'sentiment' && <SentimentTab key="sentiment" />}
           {activeTab === 'prompt' && <PromptTab key="prompt" />}
@@ -83,7 +83,7 @@ function SentimentTab() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col md:flex-row gap-8">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-6 md:flex-row md:gap-8">
       <div className="flex-1 space-y-4">
         <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8B8BA7]">Input Text</label>
         <textarea
@@ -187,7 +187,7 @@ function PromptTab() {
   const estTokens = Math.round((sysPrompt.length + prompt.length + output.length) / 4);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col md:flex-row gap-8">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-6 md:flex-row md:gap-8">
       <div className="flex-1 space-y-5">
         <div>
           <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8B8BA7] mb-2 block">System Prompt</label>
@@ -255,10 +255,10 @@ function CompareTab() {
 
       <div className="h-[280px] w-full mt-4 bg-black/20 p-4 rounded-xl border border-white/5">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={benchmarkData} layout="vertical" margin={{ top: 0, right: 30, left: 40, bottom: 0 }}>
+          <BarChart data={benchmarkData} layout="vertical" margin={{ top: 0, right: 20, left: 20, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="rgba(255,255,255,0.05)" />
-            <XAxis type="number" domain={[80, 100]} stroke="#55556A" fontSize={10} tickFormatter={(v) => `${v}%`} />
-            <YAxis dataKey="name" type="category" width={120} stroke="#8B8BA7" fontSize={11} />
+            <XAxis type="number" domain={[80, 100]} stroke="#55556A" fontSize={9} tickFormatter={(v) => `${v}%`} />
+            <YAxis dataKey="name" type="category" width={100} stroke="#8B8BA7" fontSize={9} />
             <RechartsTooltip 
               cursor={{ fill: 'rgba(255,255,255,0.02)' }}
               contentStyle={{ backgroundColor: '#12121C', border: '1px solid rgba(0,212,255,0.2)', borderRadius: '8px' }}

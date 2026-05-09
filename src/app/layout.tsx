@@ -78,17 +78,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+        <meta name="theme-color" content="#050508" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <Script
           id="json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-[#060608] text-[#e8e6e3] antialiased overflow-x-hidden min-h-screen`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-[#060608] text-[#e8e6e3] antialiased overflow-x-hidden min-h-screen min-h-[100dvh]`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <NeuralNav />
           <ColorWipe>
-            <main className="relative w-full min-h-screen" style={{ paddingTop: '110px' }}>
+            <main className="relative w-full min-h-screen min-h-[100dvh] pt-[70px] md:pt-[110px]">
               {children}
             </main>
           </ColorWipe>

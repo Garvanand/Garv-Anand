@@ -19,9 +19,10 @@ export function GlowButton({
 }: GlowButtonProps) {
   const base = cn(
     'relative inline-flex items-center justify-center gap-2',
-    'px-6 py-2.5 rounded-lg font-mono text-sm tracking-wider',
+    'px-4 sm:px-6 py-2.5 sm:py-2.5 rounded-lg font-mono text-xs sm:text-sm tracking-wider',
     'transition-all duration-300 overflow-hidden',
     'focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF]/50',
+    'active:scale-[0.96]',
     // Particle burst pseudo-elements handled via group
     'group',
     {

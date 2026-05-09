@@ -143,9 +143,9 @@ export function RealGitHubActivity() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <Card>
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-3 sm:p-4 text-center">
                 <stat.icon className={`h-5 w-5 mx-auto mb-2 ${stat.color}`} />
-                <div className="text-2xl font-bold">{stat.value}</div>
+                <div className="text-xl sm:text-2xl font-bold">{stat.value}</div>
                 <div className="text-xs text-muted-foreground">{stat.label}</div>
               </CardContent>
             </Card>
@@ -171,13 +171,13 @@ export function RealGitHubActivity() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="flex flex-wrap gap-1 justify-center overflow-x-auto">
+            <div className="flex flex-wrap gap-[2px] sm:gap-1 justify-center overflow-x-auto pb-2 no-scrollbar">
               {stats.contributionData.map((week: any, weekIndex: number) => (
-                <div key={weekIndex} className="flex flex-col gap-1">
+                <div key={weekIndex} className="flex flex-col gap-[2px] sm:gap-1">
                   {week.map((day: any, dayIndex: number) => (
                     <div
                       key={`${weekIndex}-${dayIndex}`}
-                      className={`w-3 h-3 rounded-sm cursor-pointer transition-all duration-200 hover:scale-110 ${getLevelColor(
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-sm cursor-pointer transition-all duration-200 hover:scale-110 ${getLevelColor(
                         day.level,
                       )}`}
                       onMouseEnter={() => setHoveredDay(day)}
@@ -260,7 +260,7 @@ export function RealGitHubActivity() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-4 border rounded-lg hover:bg-muted/50 transition-colors"
+                className="p-3 sm:p-4 border rounded-lg hover:bg-muted/50 transition-colors"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
@@ -274,7 +274,7 @@ export function RealGitHubActivity() {
                     <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
                       {repo.description || "No description available"}
                     </p>
-                    <div className="flex items-center space-x-4 mt-2">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2">
                       {repo.language && (
                         <div className="flex items-center space-x-1">
                           <div

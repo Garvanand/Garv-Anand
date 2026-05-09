@@ -77,8 +77,8 @@ export default function NewsroomPage() {
 
       {/* GLOBAL BREAKING HEADER */}
       <div 
-        className={`fixed left-0 right-0 z-50 flex h-12 bg-black border-y border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.8)] transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? 'top-[64px]' : 'top-[110px]'
+        className={`fixed left-0 right-0 z-50 flex h-10 sm:h-12 bg-black border-y border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.8)] transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          scrolled ? 'top-[56px] sm:top-[64px]' : 'top-[70px] sm:top-[110px]'
         }`}
       >
         <div className="bg-[#DC2626] px-6 flex items-center shrink-0 border-r-4 border-white">
@@ -113,18 +113,18 @@ export default function NewsroomPage() {
         @keyframes bulletin { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
       `}} />
 
-      <main className="max-w-[1700px] mx-auto px-6 md:px-12 pt-44">
+      <main className="max-w-[1700px] mx-auto px-4 sm:px-6 md:px-12 pt-32 sm:pt-44">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* MAIN BROADCAST AREA */}
           <div className="lg:col-span-9 space-y-16">
             
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b-[12px] border-white pb-10">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8 border-b-4 sm:border-b-[12px] border-white pb-6 sm:pb-10">
               <div>
-                <h1 className="font-display text-6xl md:text-8xl font-black tracking-tighter text-white uppercase leading-[0.8] mb-8">
+                <h1 className="font-display text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-white uppercase leading-[0.8] mb-4 sm:mb-8">
                   Intel<br/>Dispatch
                 </h1>
-                <div className="flex flex-wrap gap-x-8 gap-y-4 font-mono text-xs font-black tracking-[0.2em] text-white uppercase bg-white/5 p-4 border-l-4 border-[#00D4FF]">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 sm:gap-x-8 gap-y-2 sm:gap-y-4 font-mono text-[10px] sm:text-xs font-black tracking-[0.2em] text-white uppercase bg-white/5 p-3 sm:p-4 border-l-4 border-[#00D4FF]">
                   <div className="flex items-center gap-2">
                     <span className="text-[#00D4FF] opacity-50">AUTHOR:</span>
                     <span>Garv Anand</span>
@@ -150,15 +150,15 @@ export default function NewsroomPage() {
             </div>
 
             {/* AI ANCHOR DISPATCH */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-1 bg-white p-6 flex flex-col items-center justify-center text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-8">
+              <div className="sm:col-span-1 bg-white p-4 sm:p-6 flex flex-row sm:flex-col items-center sm:justify-center gap-4 sm:gap-0 sm:text-center">
                 <div className="w-16 h-16 rounded-full border-4 border-black mb-4 flex items-center justify-center">
                   <div className="w-8 h-8 bg-black animate-pulse" />
                 </div>
                 <span className="font-mono text-[10px] font-black text-black uppercase tracking-widest">Lead Anchor<br/>GPT-OSS-120B</span>
               </div>
               
-              <div className="md:col-span-3 bg-white/[0.03] p-10 border border-white/10 relative overflow-hidden group">
+              <div className="sm:col-span-3 bg-white/[0.03] p-6 sm:p-10 border border-white/10 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 font-mono text-[10px] font-black text-[#DC2626] opacity-30 group-hover:opacity-100 transition-opacity uppercase tracking-[0.5em]">Classified</div>
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
@@ -172,7 +172,7 @@ export default function NewsroomPage() {
                     </div>
                   ) : (
                     <>
-                      <p className="font-display text-3xl font-black text-white leading-tight uppercase tracking-tight">
+                      <p className="font-display text-xl sm:text-3xl font-black text-white leading-tight uppercase tracking-tight">
                         {brief?.briefing || "SIGNAL RE-ACQUISITION IN PROGRESS. BROADCAST INTERFERENCE DETECTED."}
                       </p>
                       <div className="flex flex-wrap gap-2 pt-4">
@@ -198,7 +198,7 @@ export default function NewsroomPage() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
                 
-                <div className="p-8 md:p-12 space-y-6">
+                <div className="p-5 sm:p-8 md:p-12 space-y-4 sm:space-y-6">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <span className="inline-block bg-[#00D4FF] text-black font-mono text-[10px] font-black px-3 py-1 uppercase italic tracking-tighter w-fit">Urgent Dispatch</span>
                     <div className="flex items-center gap-4 font-mono text-[10px] text-[#8B8BA7] uppercase tracking-widest">
@@ -208,13 +208,13 @@ export default function NewsroomPage() {
                     </div>
                   </div>
 
-                  <h2 className="font-display text-4xl md:text-7xl font-black text-white uppercase leading-[0.85] group-hover:text-[#00D4FF] transition-colors">
+                  <h2 className="font-display text-2xl sm:text-4xl md:text-7xl font-black text-white uppercase leading-[0.85] group-hover:text-[#00D4FF] transition-colors">
                     {featuredArticle.title}
                   </h2>
 
                   {brief?.signals?.find(s => s.url === featuredArticle.link)?.signal && (
-                    <div className="bg-white p-8 border-l-[12px] border-[#00D4FF]">
-                      <p className="font-display text-2xl font-black text-black uppercase leading-tight italic">
+                    <div className="bg-white p-5 sm:p-8 border-l-4 sm:border-l-[12px] border-[#00D4FF]">
+                      <p className="font-display text-lg sm:text-2xl font-black text-black uppercase leading-tight italic">
                         "{brief.signals.find(s => s.url === featuredArticle.link)?.signal}"
                       </p>
                       <div className="mt-6 flex justify-between items-end border-t border-black/10 pt-4">
@@ -264,7 +264,7 @@ export default function NewsroomPage() {
       </main>
 
       {/* FOOTER MARKET BULLETIN */}
-      <div className="fixed bottom-0 left-0 right-0 h-10 bg-black border-t-2 border-white z-[60] flex items-stretch">
+      <div className="fixed bottom-0 left-0 right-0 h-8 sm:h-10 bg-black border-t-2 border-white z-[60] hidden sm:flex items-stretch">
         <div className="bg-white px-4 flex items-center shrink-0">
           <span className="font-mono text-[10px] font-black text-black uppercase tracking-widest italic">Trend Monitor</span>
         </div>

@@ -100,12 +100,12 @@ export function FuturisticHero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
     >
       {/* Gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-primary/20 blur-[120px]"
+          className="absolute top-1/4 -left-1/4 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full bg-primary/20 blur-[80px] sm:blur-[120px]"
           animate={{
             x: [0, 50, 0],
             y: [0, 30, 0],
@@ -117,7 +117,7 @@ export function FuturisticHero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-secondary/20 blur-[100px]"
+          className="absolute bottom-1/4 -right-1/4 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] rounded-full bg-secondary/20 blur-[60px] sm:blur-[100px]"
           animate={{
             x: [0, -40, 0],
             y: [0, -40, 0],
@@ -129,7 +129,7 @@ export function FuturisticHero() {
           }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[80px]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] rounded-full bg-accent/10 blur-[60px] sm:blur-[80px]"
           animate={{
             scale: [1, 1.2, 1],
           }}
@@ -155,7 +155,7 @@ export function FuturisticHero() {
             >
               <Badge
                 variant="outline"
-                className="mb-8 px-4 py-2 text-sm font-medium glass-glow border-primary/30"
+                className="mb-6 sm:mb-8 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium glass-glow border-primary/30"
               >
                 <span className="relative flex h-2 w-2 mr-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -164,14 +164,14 @@ export function FuturisticHero() {
                 Available for opportunities
               </Badge>
             </motion.div>
-
+            <br></br>
             {/* Main heading */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-4 sm:mb-6">
                 <span className="block text-foreground">Hi, I&apos;m</span>
                 <span className="block gradient-text-animated mt-2">Garv Anand</span>
               </h1>
@@ -182,9 +182,9 @@ export function FuturisticHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="h-16 sm:h-20 flex items-center justify-center mb-8"
+              className="h-12 sm:h-16 md:h-20 flex items-center justify-center mb-6 sm:mb-8"
             >
-              <div className="flex items-center space-x-3 text-xl sm:text-2xl md:text-3xl">
+              <div className="flex items-center space-x-2 sm:space-x-3 text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                 <span className="text-muted-foreground font-mono">
                   {displayText}
@@ -198,7 +198,7 @@ export function FuturisticHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2"
             >
               B.Tech CSE (AI/ML) student at VIT University. Building intelligent
               systems that bridge the gap between cutting-edge AI research and real-world
@@ -210,7 +210,7 @@ export function FuturisticHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap justify-center gap-3 mb-12"
+              className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-2"
             >
               {techStack.map((tech, index) => (
                 <motion.div
@@ -219,7 +219,7 @@ export function FuturisticHero() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className={`px-4 py-2 rounded-full bg-gradient-to-r ${tech.color} text-white text-sm font-medium shadow-lg`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r ${tech.color} text-white text-xs sm:text-sm font-medium shadow-lg`}
                 >
                   {tech.name}
                 </motion.div>
@@ -231,11 +231,11 @@ export function FuturisticHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4"
             >
               <Button
                 size="lg"
-                className="group relative overflow-hidden px-8 py-6 text-lg neon-glow"
+                className="group relative overflow-hidden px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg neon-glow w-full sm:w-auto"
                 asChild
               >
                 <Link href="/projects">
@@ -249,7 +249,7 @@ export function FuturisticHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-lg glass border-primary/30 hover:border-primary/60"
+                className="px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg glass border-primary/30 hover:border-primary/60 w-full sm:w-auto"
                 asChild
               >
                 <Link href="/resume">View Resume</Link>
@@ -261,7 +261,7 @@ export function FuturisticHero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16"
+              className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-12 sm:mb-16 px-2"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -273,7 +273,7 @@ export function FuturisticHero() {
                   className="glass-card rounded-xl p-4 text-center tech-card"
                 >
                   <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -328,7 +328,7 @@ export function FuturisticHero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -341,7 +341,7 @@ export function FuturisticHero() {
       </motion.div>
 
       {/* Floating decorative elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
         {[Brain, Cpu, Database, Sparkles].map((Icon, index) => (
           <motion.div
             key={index}

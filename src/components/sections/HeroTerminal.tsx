@@ -142,11 +142,14 @@ export function HeroTerminal({ onClose }: { onClose: () => void }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 30, scale: 0.96 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed bottom-6 right-6 z-50 w-[420px] h-[460px] rounded-xl flex flex-col overflow-hidden terminal-scanline"
+      className="fixed z-50 rounded-t-xl sm:rounded-xl flex flex-col overflow-hidden terminal-scanline
+        bottom-0 left-0 right-0 h-[75dvh] sm:h-[460px]
+        sm:bottom-6 sm:right-6 sm:left-auto sm:top-auto sm:w-[420px]"
       style={{
         background: '#050508',
         border: '1px solid #00FF87',
         boxShadow: '0 0 20px rgba(0, 255, 135, 0.1)',
+        paddingBottom: 'env(safe-area-inset-bottom)',
       }}
     >
       <style dangerouslySetInnerHTML={{__html: `

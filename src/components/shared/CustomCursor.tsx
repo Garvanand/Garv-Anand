@@ -46,9 +46,23 @@ export function CustomCursor() {
     }
   }, [updatePosition])
 
-  // Don't render on touch devices
-  if (typeof window !== "undefined" && "ontouchstart" in window) {
-    return null
+  // Don't render on touch devices or small screens
+  const [isTouchDevice, setIsTouchDevice] = useState(true);
+
+  useEffect(() => {
+    const checkTouch = () => {
+      const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+      const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+      setIsTouchDevice(hasTouch || isSmallScreen || isCoarsePointer);
+    };
+    checkTouch();
+    window.addEventListener('resize', checkTouch);
+    return () => window.removeEventListener('resize', checkTouch);
+  }, []);
+
+  if (isTouchDevice) {
+    return null;
   }
 
   return (

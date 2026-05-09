@@ -11,7 +11,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] selection:bg-[#00D4FF]/30 selection:text-white">
       
 
-      <main className="max-w-5xl mx-auto px-6 md:px-10 pt-32 pb-24">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 pt-20 sm:pt-32 pb-16 sm:pb-24">
         
         {/* SECTION 1: Why I Build AI */}
         <SectionReveal>
@@ -19,7 +19,7 @@ export default function AboutPage() {
             <h1 className="font-mono text-sm tracking-[0.2em] uppercase text-[#00D4FF] mb-8">
               Why I Build AI
             </h1>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-[#F0F0FF] max-w-4xl tracking-tight">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-[#F0F0FF] max-w-4xl tracking-tight">
               Watching my grandfather struggle to navigate a basic smartphone app made me realize how much technology excludes people. That led me to build <span className="text-[#00D4FF]">ElderAI</span>, and it defined my entire philosophy: <span className="text-[#7C3AED]">I build AI systems for real people, not benchmarks.</span>
             </h2>
           </div>
@@ -73,12 +73,12 @@ export default function AboutPage() {
             </h3>
             
             {rova && (
-              <div className="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden border-[#00D4FF]/20">
+              <div className="glass-card rounded-2xl p-5 sm:p-8 md:p-12 relative overflow-hidden border-[#00D4FF]/20">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#00D4FF]/5 rounded-full blur-[80px] pointer-events-none" />
                 
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 relative z-10">
                   <div>
-                    <h4 className="font-display text-3xl font-bold text-white mb-2">{rova.role}</h4>
+                    <h4 className="font-display text-xl sm:text-3xl font-bold text-white mb-2">{rova.role}</h4>
                     <p className="text-lg text-[#00D4FF] font-mono">{rova.company}</p>
                   </div>
                   <div className="text-right">

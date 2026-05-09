@@ -18,13 +18,13 @@ export default function ResumePage() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <div className="max-w-4xl mx-auto px-6 md:px-10 pt-28 pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 pt-20 sm:pt-28 pb-16 sm:pb-20">
         <SectionReveal>
           <span className="section-label">Resume</span>
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mt-6 mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-6 mb-4">
             My <span className="gradient-text">credentials.</span>
           </h1>
           <p className="text-[var(--text-muted)] max-w-md mb-8">
@@ -64,7 +64,7 @@ export default function ResumePage() {
 
         {/* Highlights */}
         <SectionReveal delay={0.4}>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             <MetricCard value="8.83" label="CGPA" context="/ 10 — VIT" />
             <MetricCard value="4+" label="ML Projects" context="Production & Research" />
             <MetricCard value="Top 1%" label="Hackathons" context="National Level" />

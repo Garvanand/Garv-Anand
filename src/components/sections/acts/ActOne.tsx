@@ -24,7 +24,7 @@ export function ActOne() {
   const rightOpacity = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center py-24 md:py-32 px-6 md:px-10">
+    <section ref={ref} className="relative min-h-screen flex items-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-10">
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
           style={{ opacity: leftOpacity }}
@@ -36,13 +36,13 @@ export function ActOne() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left — statement */}
           <motion.div style={{ x: leftX, opacity: leftOpacity }}>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] text-[var(--text)] mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold leading-[1.1] text-[var(--text)] mb-4 sm:mb-6">
               Most AI demos stop at{' '}
               <span className="line-through text-[var(--text-muted)] decoration-[var(--accent)]/40">
                 Jupyter notebooks.
               </span>
             </h2>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold leading-[1.1] mb-6 sm:mb-8">
               I build systems that{' '}
               <span className="neon-text">ship.</span>
             </h2>
@@ -62,7 +62,7 @@ export function ActOne() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="glass-card rounded-xl p-5 flex items-start gap-4"
+                className="glass-card rounded-xl p-4 sm:p-5 flex items-start gap-3 sm:gap-4"
               >
                 <div
                   className="w-11 h-11 rounded-lg flex items-center justify-center text-xl shrink-0"

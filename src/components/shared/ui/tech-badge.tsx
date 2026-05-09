@@ -16,7 +16,7 @@ export function TechBadge({ label, icon, className, color = '#00D4FF' }: TechBad
   return (
     <span
       className={cn(
-        'group inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono tracking-wider',
+        'group inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[11px] font-mono tracking-wider',
         'border border-white/[0.06] bg-white/[0.03] text-[#8B8BA7]',
         'transition-all duration-200 cursor-default select-none',
         'hover:text-[#F0F0FF] hover:border-white/20',

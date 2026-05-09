@@ -42,7 +42,7 @@ export function RotatingWord() {
 
   return (
     <span
-      className="inline-block min-w-[10ch]"
+      className="inline-block min-w-[6ch] sm:min-w-[10ch]"
       style={{
         background: 'linear-gradient(135deg, #00D4FF 0%, #7C3AED 100%)',
         WebkitBackgroundClip: 'text',

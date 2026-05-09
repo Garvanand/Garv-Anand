@@ -79,11 +79,11 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 pt-20 sm:pt-28 pb-16 sm:pb-20">
         {/* Header */}
         <SectionReveal>
           <span className="section-label">Project Archive</span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mt-6 mb-12">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-6 mb-8 sm:mb-12">
             Systems I've <span className="gradient-text">built.</span>
           </h1>
         </SectionReveal>
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
           <div className="glass-card rounded-2xl overflow-hidden relative mb-20 border-[#00e87b]/20">
             <AudioWaveform />
             
-            <div className="relative z-10 p-8 md:p-12">
+            <div className="relative z-10 p-5 sm:p-8 md:p-12">
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#00e87b] bg-[#00e87b]/10 px-2 py-1 rounded">
                   Featured Project
@@ -110,14 +110,14 @@ export default function ProjectsPage() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                  <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+                  <h2 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 tracking-tight">
                     {flagship.title}
                   </h2>
-                  <p className="text-xl text-[#8B8BA7] font-display mb-6">
+                  <p className="text-base sm:text-xl text-[#8B8BA7] font-display mb-4 sm:mb-6">
                     {flagship.subtitle}
                   </p>
                   
-                  <div className="space-y-4 text-[15px] leading-relaxed text-[#A0A0B8]">
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-[15px] leading-relaxed text-[#A0A0B8]">
                     <p>
                       <strong>The Problem:</strong> {flagship.problem_statement}
                     </p>
